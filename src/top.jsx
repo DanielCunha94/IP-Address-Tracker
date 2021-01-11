@@ -2,7 +2,7 @@ import React from "react";
 import button from "./assets/images/icon-arrow.svg";
 
 function Top({ onHandleSubmit, input, onHandleChange, info, ip, msg }) {
-  if (msg.length == 0) {
+  if (msg.length === 0) {
     return (
       <div className="top">
         <div className="inputContainer">
@@ -24,19 +24,19 @@ function Top({ onHandleSubmit, input, onHandleChange, info, ip, msg }) {
             <h4>IP ADDRESS</h4>
             <h1>{ip}</h1>
           </div>
-
+          <span className="division"></span>
           <div>
             <h4>LOCATION</h4>
             <h1>
               {info.city}, {info.region} {info.country}
             </h1>
           </div>
-
+          <span className="division"></span>
           <div>
             <h4>TIMEZONE</h4>
             <h1>{info.timezone}</h1>
           </div>
-
+          <span className="division"></span>
           <div>
             <h4>ISP</h4>
             <h1>{info.isp}</h1>

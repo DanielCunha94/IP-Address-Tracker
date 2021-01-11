@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-
 import "./App.css";
 import Top from "./top";
-import Mapcont from "./map";
+import Map from "./map";
 
 class App extends Component {
   constructor(props) {
@@ -68,8 +67,8 @@ class App extends Component {
           country: "",
           region: "",
           city: "",
-          lat: 0,
-          lng: 0,
+          lat: 30,
+          lng: -9,
           postalCode: "",
           timezone: "",
           isp: "",
@@ -160,7 +159,11 @@ class App extends Component {
           ip={this.state.ip}
           msg={this.state.validInputMSG}
         />
-        <Mapcont />
+
+        <Map
+          lat={this.state.ipOrDomainData.lat}
+          lng={this.state.ipOrDomainData.lng}
+        />
       </div>
     );
   }
